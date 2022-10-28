@@ -28,7 +28,7 @@ public class ModificarBicicleta extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int id = Integer.parseInt(request.getParameter("idBicicleta"));
+		int id = Integer.parseInt(request.getParameter("id"));
 		
 		
 		if(id <=0 || id == 0) {
@@ -62,7 +62,7 @@ public class ModificarBicicleta extends HttpServlet {
 		int idMarca = Integer.parseInt(request.getParameter("marca"));
 		
 		
-		int id = Integer.parseInt(request.getParameter("id_bicicleta"));
+		int id = Integer.parseInt(request.getParameter("id"));
 		
 		
 		if(id <=0) {

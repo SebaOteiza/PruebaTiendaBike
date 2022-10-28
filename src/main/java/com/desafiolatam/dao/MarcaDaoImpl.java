@@ -23,7 +23,7 @@ public class MarcaDaoImpl implements MarcaDao {
 	@Override
 	public Marca buscarMarca(int id) {
 		
-		String sql = "SELECT * FROM marca WHERE id_marca = ?";
+		String sql = "SELECT * FROM marca WHERE id = ?";
 		Marca marca = new Marca();
 		
 		
@@ -34,7 +34,7 @@ public class MarcaDaoImpl implements MarcaDao {
 			rs = pstm.executeQuery();
 			
 			if(rs.next()) {
-				marca.setId(rs.getString("id_marca"));
+				marca.setId(rs.getInt("id"));
 				marca.setNombre(rs.getString("nombre"));
 				
 				
@@ -64,7 +64,7 @@ public class MarcaDaoImpl implements MarcaDao {
 		
 		while(rs.next()) {
 			Marca marca = new Marca();
-			marca.setId(rs.getString("id_marca"));
+			marca.setId(rs.getInt("id"));
 			marca.setNombre(rs.getString("nombre"));
 			listaMarcas.add(marca);
 			

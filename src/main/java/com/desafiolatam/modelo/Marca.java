@@ -2,24 +2,24 @@ package com.desafiolatam.modelo;
 
 public class Marca {
 	
-	private String id;
+	private int id;
 	private String nombre;
 	
 	public Marca() {
 		super();
 	}
 
-	public Marca(String id, String nombre) {
+	public Marca(int id, String nombre) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

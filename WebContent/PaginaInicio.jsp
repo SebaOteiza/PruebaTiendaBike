@@ -15,8 +15,8 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
 <p class="lead text-center color: white"> Bienvenid@ a nuestra tienda  </p>
 
  <div style="text-align:center">
-<a href="/ListarBicicleta">Listar Bicicleta</a>
-<a href="/AgregarBicicleta">Agregar Bicicleta</a>
+<a href="/mibike-store/ListarBicicleta">Listar Bicicleta</a>
+<a href="/mibike-store/AgregarBicicleta">Agregar Bicicleta</a>
 </div>
 
 </body>
