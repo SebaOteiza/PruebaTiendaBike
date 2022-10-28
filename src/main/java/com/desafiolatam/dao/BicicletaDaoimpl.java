@@ -21,7 +21,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 
 	@Override
 	public Bicicleta buscarBicicleta(int id) {
-		String sql = "SELECT * FROM bicicleta WHERE id_bicicleta = ?";
+		String sql = "SELECT * FROM bicicleta WHERE id = ?";
 		Bicicleta bicicleta = new Bicicleta();
 		
 		conexion = conn.obtenerConexion();
@@ -31,12 +31,12 @@ public class BicicletaDaoimpl implements BicicletaDao {
 			rs = pstm.executeQuery();
 			
 			if(rs.next()) {
-				bicicleta.setId(rs.getInt("id_bicicleta"));
+				bicicleta.setId(rs.getInt("id"));
 				bicicleta.setModelo(rs.getString("modelo"));
 				bicicleta.setColor(rs.getString("color"));
 				bicicleta.setAro(rs.getInt("aro"));
 				bicicleta.setPrecio(rs.getInt("precio"));
-				bicicleta.setIdMarca(rs.getInt("id_marca"));
+				bicicleta.setIdMarca(rs.getInt("id"));
 			}
 			
 		} catch (SQLException e) {
@@ -61,12 +61,12 @@ public class BicicletaDaoimpl implements BicicletaDao {
 			while(rs.next()) {
 				Bicicleta bicicleta = new Bicicleta();
 				
-				bicicleta.setId(rs.getInt("id_bicicleta"));
+				bicicleta.setId(rs.getInt("id"));
 				bicicleta.setModelo(rs.getString("modelo"));
 				bicicleta.setColor(rs.getString("color"));
 				bicicleta.setAro(rs.getInt("aro"));
 				bicicleta.setPrecio(rs.getInt("precio"));
-				bicicleta.setIdMarca(rs.getInt("id_marca"));
+				bicicleta.setIdMarca(rs.getInt("id"));
 				listaBicicletas.add(bicicleta);
 				
 			}
@@ -82,7 +82,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 	@Override
 	public boolean agregarBicicleta(Bicicleta bicicleta) {
 		
-		String sql ="INSERT INTO bicicleta (id_bicicleta, modelo, color, aro, precio, id_marca)"
+		String sql ="INSERT INTO bicicleta (id, modelo, color, aro, precio, id)"
 				+"VALUES (?, ?, ?, ?, ?, ?)";
 		
 		conexion = conn.obtenerConexion();
@@ -113,8 +113,8 @@ public class BicicletaDaoimpl implements BicicletaDao {
 	@Override
 	public boolean modificarBicicleta(Bicicleta bicicleta) {
 		
-		String sql ="UPDATE bicicleta SET modelo= ?, color=?, aro=?, precio=?, id_marca=?"
-				+"WHERE id_bicicleta=?";
+		String sql ="UPDATE bicicleta SET modelo= ?, color=?, aro=?, precio=?, id=?"
+				+"WHERE id=?";
 		
 		conexion = conn.obtenerConexion();
 		try {
@@ -145,7 +145,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 
 	@Override
 	public boolean eliminarBicicleta(int id) {
-		String sql ="DELETE FROM bicicleta WHERE id_bicicleta =?";
+		String sql ="DELETE FROM bicicleta WHERE id =?";
 		
 		conexion = conn.obtenerConexion();
 		try {
@@ -173,7 +173,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 	public int obtenerUltimoId() {
 		
 	
-		String sql = "SELECT MAX(id_bicicleta) AS max FROM bicicleta";
+		String sql = "SELECT MAX(id) AS max FROM bicicleta";
 		
 		int maximo =0;
 		

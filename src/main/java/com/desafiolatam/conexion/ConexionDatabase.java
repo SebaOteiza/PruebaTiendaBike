@@ -15,7 +15,7 @@ public class ConexionDatabase {
 	private static final String PASSWORD ="desafiolatam";
 	
 	
-	private void crearConexion() {
+	protected Connection crearConexion() {
 		
 		try {
 			Class.forName(DRIVER);
@@ -28,7 +28,7 @@ public class ConexionDatabase {
 			e.printStackTrace();
 		}
 		
-		
+		return conexion;
 	}
 	
 	public Connection obtenerConexion() {
