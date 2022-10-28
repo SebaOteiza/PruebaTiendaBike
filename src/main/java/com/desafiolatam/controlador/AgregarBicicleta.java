@@ -59,7 +59,7 @@ public class AgregarBicicleta extends HttpServlet {
 		bicicleta.setIdMarca(idMarca);
 		
 		
-		bicicletaDao.aagregarBicicleta(bicicleta);
+		bicicletaDao.agregarBicicleta(bicicleta);
 		
 		request.getRequestDispatcher("PaginaInicio.jsp").forward(request, response);
 		

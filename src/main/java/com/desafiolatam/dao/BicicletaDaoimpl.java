@@ -80,7 +80,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 	}
 
 	@Override
-	public boolean aagregarBicicleta(Bicicleta bicicleta) {
+	public boolean agregarBicicleta(Bicicleta bicicleta) {
 		
 		String sql ="INSERT INTO bicicleta (id_bicicleta, modelo, color, aro, precio, id_marca)"
 				+"VALUES (?, ?, ?, ?, ?, ?)";

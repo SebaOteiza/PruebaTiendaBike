@@ -8,7 +8,7 @@ public interface BicicletaDao {
 	
 	public Bicicleta buscarBicicleta(int id);
 	public List<Bicicleta> listarBicicletas();
-	public boolean aagregarBicicleta(Bicicleta bicicleta);
+	public boolean agregarBicicleta(Bicicleta bicicleta);
 	public boolean modificarBicicleta(Bicicleta bicicleta);
 	public boolean eliminarBicicleta(int id);
 	public int obtenerUltimoId();
