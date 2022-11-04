@@ -66,7 +66,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 				bicicleta.setColor(rs.getString("color"));
 				bicicleta.setAro(rs.getInt("aro"));
 				bicicleta.setPrecio(rs.getInt("precio"));
-				bicicleta.setIdMarca(rs.getInt("id"));
+				bicicleta.setIdMarca(rs.getInt("idMarca"));
 				listaBicicletas.add(bicicleta);
 				
 			}
@@ -82,7 +82,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 	@Override
 	public boolean agregarBicicleta(Bicicleta bicicleta) {
 		
-		String sql ="INSERT INTO bicicleta (id, modelo, color, aro, precio, id)"
+		String sql ="INSERT INTO bicicleta (id, modelo, color, aro, precio, idMarca)"
 				+"VALUES (?, ?, ?, ?, ?, ?)";
 		
 		conexion = conn.obtenerConexion();
@@ -113,7 +113,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 	@Override
 	public boolean modificarBicicleta(Bicicleta bicicleta) {
 		
-		String sql ="UPDATE bicicleta SET modelo= ?, color=?, aro=?, precio=?, id=?"
+		String sql ="UPDATE bicicleta SET modelo= ?, color=?, aro=?, precio=?, idMarca=?"
 				+"WHERE id=?";
 		
 		conexion = conn.obtenerConexion();
