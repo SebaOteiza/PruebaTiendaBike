@@ -36,7 +36,7 @@ public class BicicletaDaoimpl implements BicicletaDao {
 				bicicleta.setColor(rs.getString("color"));
 				bicicleta.setAro(rs.getInt("aro"));
 				bicicleta.setPrecio(rs.getInt("precio"));
-				bicicleta.setIdMarca(rs.getInt("id"));
+				bicicleta.setIdMarca(rs.getInt("idMarca"));
 			}
 			
 		} catch (SQLException e) {
