@@ -32,7 +32,7 @@
 		<td>${bicicleta.getMarca().getNombre()}</td>
 		<td>
 			<a href="/ModificarBicicleta?id_bicicleta=${bicicleta.getBicicleta().getId()}">Modificar</a>&nbsp;
-			<a href="/ElimiinarBicicleta?id=${bicicleta.getBicicleta().getId()}">Eliminar</a>
+			<a href="/EliminarBicicleta?id=${bicicleta.getBicicleta().getId()}">Eliminar</a>
 		
 		</td>
 		

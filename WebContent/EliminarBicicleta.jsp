@@ -10,7 +10,7 @@
 	<h1>Eliminar Bicicleta</h1>
 	<p>¿Estás seguro de eliminar la bicicleta?</p>
 	
-	<form action="/EliminarBicicleta" method="POST">
+	<form action="EliminarBicicleta" method="POST">
 	
 		<input type ="hidden" value="${id}" name="id" />
 		<button type="submit">Sí</button>

@@ -13,7 +13,7 @@
 
 <h1>Agregar bicicleta</h1>
 
-	<form action="/AgregarBicicleta" method="POST">
+	<form action="AgregarBicicleta" method="POST">
 	
 		<label for="modelo">Modelo</label>
 		<input type ="text" name="modelo" id="modelo"/>
